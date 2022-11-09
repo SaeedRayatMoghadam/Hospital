@@ -1,0 +1,538 @@
+@font-face {
+  font-family: "Samim";
+  src: url("../fonts/Samim-FD.woff") format("woff"),
+    url("../fonts/Samim-FD.woff2") format("woff"),
+    url("../fonts/Samim-FD.ttf") format("truetype"),
+    url("../fonts/Samim-FD.eot") format("eot");
+}
+/* rgba(12,184,182,0.91) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  direction: rtl;
+  font-family: "Samim", sans-serif;
+}
+
+/* <-- Container --> */
+div.container {
+  width: 100%;
+  height: 635px;
+  background: linear-gradient(RGBA(13, 70, 83, 0.78), RGBA(13, 70, 83, 0.78)),
+    url("../img/bg-banner.jpg") no-repeat center center/cover;
+}
+
+/* <-- Container --> */
+
+/* <-- Navbar --> */
+nav {
+  width: 100%;
+  margin: auto;
+  position: fixed;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+div.navbar {
+  width: 75%;
+  margin: auto;
+  display: flex;
+  color: #fff;
+  justify-content: space-between;
+  height: 75px;
+}
+
+.navbar .logo {
+  width: 110px;
+  margin-top: 3px;
+}
+
+.navbar .nav-items {
+  display: flex;
+}
+
+.navbar .nav-items .nav-item {
+  padding: 20px 15px 15px 15px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.navbar .nav-items .nav-item:hover {
+  background-color: rgba(120, 156, 156, 0.91);
+}
+
+.navbar .nav-items .nav-item a {
+  color: #fff;
+  font-size: 15px;
+}
+
+/* <-- Navbar --> */
+
+/* <-- Header --> */
+
+header.header {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding-bottom: 130px;
+  color: #fff;
+}
+
+.header h3 {
+  font-size: 35px;
+  padding: 20px 0 5px 0;
+}
+
+.header p {
+  font-size: 15px;
+  padding: 20px 0;
+}
+
+.header a.btn {
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: rgba(12, 184, 182, 0.91);
+  transition: opacity 0.2s ease;
+}
+
+.header a.btn:hover {
+  opacity: 0.9;
+}
+
+/* <-- Header --> */
+
+/* <-- Services --> */
+
+.services {
+  width: 75%;
+  max-width: 75%;
+  margin: 50px auto;
+  display: grid;
+  gap: 5px;
+  grid-template-areas: "list list about";
+}
+
+.services-list {
+  grid-area: list;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.services-list .service {
+  width: 50%;
+}
+
+.service:nth-child(3),
+.service:nth-child(4) {
+  margin-top: 20px;
+}
+
+.service i {
+  font-size: 40px;
+  color: rgba(12, 184, 182, 0.91);
+  padding-bottom: 15px;
+}
+
+.service h4 {
+  font-size: 18px;
+}
+
+.service p {
+  padding: 10px 0;
+  color: #0c0b0b99;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.about-services {
+  grid-area: about;
+}
+.about-services h3 {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.about-services p {
+  color: #0c0b0b99;
+}
+
+.about-services h3::before {
+  content: "";
+  width: 29%;
+  height: 3px;
+  background-color: darkorange;
+  position: absolute;
+  top: 35px;
+}
+
+/* <-- Services --> */
+
+/* <-- TimeLine --> */
+
+.timeline {
+  width: 75%;
+  margin: auto;
+  display: flex;
+  margin-bottom: 100px;
+}
+.timeline .timeline-item {
+  background-color: #0cb8b6;
+  border: 1px solid #fff;
+  padding: 0px 20px 25px 10px;
+  font-size: 15px;
+  width: calc(100% / 3);
+  color: #fff;
+}
+
+.timeline .timeline-item h4 {
+  text-align: right;
+  color: #fff;
+  padding: 30px 0px 10px 10px;
+  font-size: 25px;
+}
+
+.timeline .timeline-item table,
+.timeline .timeline-item table td {
+  border: 1px solid #000;
+  border-collapse: collapse;
+}
+
+.timeline .timeline-item table td {
+  border: 0px solid #ededed;
+  border-top: 1px solid rgba(216, 216, 216, 0.6);
+  padding: 10px 40px 10px 30px;
+}
+
+.timeline .timeline-item p {
+  padding: 5px 0px 20px;
+}
+
+.timeline .timeline-item a {
+  color: #fff;
+  padding: 10px 15px;
+  border: 2px solid #efefef;
+  border-radius: 3px;
+}
+
+.timeline .timeline-item a:hover {
+  transition: all 0.2s ease;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* <-- TimeLine --> */
+
+/* <-- Information --> */
+
+.information {
+  width: 75%;
+  margin: auto;
+  display: flex;
+}
+
+.info-box h3 {
+  font-size: 24px;
+  padding: 20px 0;
+  font-weight: bold;
+}
+
+.info-box {
+  position: relative;
+}
+
+.info-box p {
+  color: #0c0b0b99;
+  font-size: 15px;
+}
+
+.info-box ul li:first-child {
+  margin-bottom: 40px;
+}
+
+.info-box ul li {
+  background-color: #0cb8b6;
+  border-radius: 50%;
+  padding: 8px 16px;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  margin: auto;
+}
+
+.info-arrows ul {
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+
+.info-box-title::before {
+  content: "";
+  width: 22%;
+  height: 3px;
+  background-color: darkorange;
+  position: absolute;
+  top: 65px;
+}
+
+/* <-- Information --> */
+
+/* <-- Doctors --> */
+
+section.doctors {
+  width: 75%;
+  margin: auto;
+  margin-top: 80px;
+}
+
+.doctors h2 {
+  position: relative;
+  font-size: 26px;
+}
+
+.doctors h2::before {
+  content: "";
+  width: 8%;
+  height: 3px;
+  background-color: darkorange;
+  position: absolute;
+  top: 50px;
+}
+
+.docs-container {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.doc {
+  border: 1px solid #ededed;
+}
+
+.doc img {
+  width: 260px;
+}
+.docs-description {
+  padding: 10px;
+}
+.doc h4 {
+  font-size: 22px;
+}
+
+.doc p {
+  color: #0c0b0b99;
+  font-size: 16px;
+}
+.doc-icons {
+  padding-top: 5px;
+}
+.doc-icons i {
+  color: RGBA(13, 70, 83, 0.78);
+  font-size: 23px;
+}
+
+/* <-- Doctors --> */
+
+/* <-- Comments --> */
+
+.comments {
+  width: 100%;
+  margin: auto;
+  margin-top: 80px;
+  padding-top: 30px;
+  background-color: #eeeeee;
+}
+
+.comments h3 {
+  position: relative;
+  font-size: 24px;
+  margin-right: 12.5%;
+  padding-bottom: 30px;
+}
+
+.comments h3::before {
+  content: "";
+  width: 22%;
+  height: 3px;
+  background-color: darkorange;
+  position: absolute;
+  top: 40px;
+}
+
+.comments-container {
+  width: 75%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 50px;
+}
+
+.comment-box {
+  padding: 10px 15px 10px;
+  box-shadow: 4px 4px 0px 0px rgba(216, 216, 216, 0.6);
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 0 solid transparent;
+  border-right: 30px solid transparent;
+  border-top: 30px solid #fff;
+  position: relative;
+  bottom: 20px;
+  right: 300px;
+}
+
+.comment-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.comment-text h5 {
+  font-size: 16px;
+  padding-bottom: 8px;
+}
+
+/* <-- Comments --> */
+
+
+/* <-- AboutUs --> */
+
+section.about-us{
+  background-color: #090909;
+  color: #fff;
+  margin-top: 50px;
+  padding: 50px;
+}
+
+div.about-container{
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  margin: auto;
+}
+
+.about-container h3{
+  width: 50%;
+  font-size: 32px;
+  text-align: center;
+}
+.about-container p{
+  width: 50%;
+}
+
+/* <-- AboutUs --> */
+
+
+
+
+/* <-- ContactUs --> */
+
+section.contact-us{
+  width: 75%;
+  margin: auto;
+}
+
+.contact-us h3{
+  font-size: 30px;
+  position: relative;
+  padding: 40px 0 50px;
+}
+
+.contact-us h3::before {
+  content: "";
+  width: 11%;
+  height: 3px;
+  background-color: darkorange;
+  position: absolute;
+  top: 90px;
+  font-weight: bold;
+}
+
+div.contact-box{
+  display: flex;
+}
+
+.contact-form{
+  width: 65%;
+}
+
+.contact-form h4{
+  font-size: 22px;
+  padding-bottom: 24px;
+}
+
+.contact-form input[type=text] , .contact-form textarea{
+  display: block;
+  width: 100%;
+  padding: 10px 10px 10px 0;
+  margin-bottom: 10px;
+  border: 1px solid #d7d4d4;
+  border-radius: 3px;
+  font-family: "Samim";
+}
+
+.contact-form input[type=submit]{
+  padding: 10px 25px;
+  background-color: #0cb8b6;
+  color: #fff;
+  border: none;
+  font-size: 14px;
+  font-family: "Samim";
+}
+
+
+.contact-info{
+  width: 35%;
+  padding-right: 20px;
+}
+
+.contact-info h4{
+  font-size: 22px;
+  color: #000;
+  font-weight: bold;
+}
+
+.contact-info .location{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0 15px 0;
+}
+
+.location span{
+  font-size: 18px;
+  direction: ltr;
+}
+
+.location i{
+  font-size: 22px;
+  color: #090909;
+}
+
+/* <-- ContactUs --> */
+
+
